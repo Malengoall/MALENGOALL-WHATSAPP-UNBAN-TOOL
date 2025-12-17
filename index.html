@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MALENGOALL WHATSAPP UNBAN TOOL</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #0f0;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 20px;
+}
+.container {
+      border: 2px solid #0f0;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+}
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 1.8em;
+}
+    label {
+      margin-top: 15px;
+      display: block;
+      font-weight: bold;
+}
+    select, input, textarea, button {
+      width: 100%;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      background-color: #000;
+      color: #0f0;
+      border: 1px solid #0f0;
+      padding: 10px;
+      font-family: 'Courier New', Courier, monospace;
+}
+    button {
+      background-color: #0f0;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+}
+.channel-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+}
+.channel-buttons a {
+      text-align: center;
+      background-color: #0f0;
+      color: #000;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid #0f0;
+}
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #0f0;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>MALENGOALL WHATSAPP UNBAN TOOL</h1>
+
+    <label for="number">ENTER YOUR NUMBER:</label>
+    <input type="text" id="number" placeholder="+255612076800">
+
+    <label for="unban-option">SELECT UNBAN OPTION:</label>
+    <select id="unban-option" onchange="updatePrompt()">
+      <option value="permanent">PERMANENT UNBANNED</option>
+      <option value="temporary">TEMPORARY UNBAN REVIEW</option>
+    </select>
+
+    <label for="prompt">SELECT PROMPT:</label>
+    <textarea id="prompt" rows="10"></textarea>
+
+    <button onclick="sendUnbanRequest()">SEND UNBAN REQUEST</button>
+
+    <p style="text-align:center;">DEVELOPED BY MALENGOALL TECH | © 2025<br>| ALL SYSTEMS OPERATIONAL</p>
+
+    <div class="channel-buttons">
+      <a href="https://whatsapp.com/channel/0029VbAYbkdA2pLCiCORBM1t" target="_blank">༺☆• C¥βER✰✰𝔾𝐄𝐍ĩ𝒁✰✰𝐓Ėᴀᙢ •☆༻</a>
+      <a href="https://whatsapp.com/channel/0029VanmCxRFMqrVPPW6tZ3F" target="_blank">iDigital Tech</a>
+    </div>
+  </div>
+
+  <footer>
+    POWERED BY MALENGOALL TECH
+  </footer>
+
+  <script>
+    function updatePrompt() {
+      const option = document.getElementById('unban-option').value;
+      const promptField = document.getElementById('prompt');
+      if (option === 'permanent') {
+        promptField.value = `Dear WhatsApp Support Team,\n\nI am writing to respectfully request the permanent unbanning of my WhatsApp account. I understand that my account may have violated certain terms, and I sincerely apologize for any unintended actions. I have always valued WhatsApp as a vital communication tool for my personal and professional life. I kindly ask for a final chance to restore my account and assure you that I will strictly adhere to all guidelines moving forward.\n\nThank you for your time and understanding.\n\nSincerely,\n[Your Name]`;
+} else {
+        promptField.value = `Dear WhatsApp Support Team,\n\nI hope this message finds you well. I am reaching out regarding the temporary suspension of my WhatsApp account. I believe this may have been a misunderstanding or an error, and I would greatly appreciate a review of my case. WhatsApp is essential for my daily communication, and I am committed to following all community standards. Please consider reinstating my account so I can continue using your valuable service.\n\nThank you for your attention and support.\n\nBest regards,\n[Your Name]`;
+}
+}
+
+    function sendUnbanRequest() {
+      const number = document.getElementById('number').value;
+const prompt = document.getElementById('prompt').value;
+      const subject = `Unban Request for WhatsApp Number ${number}`;
+      const body = encodeURIComponent(prompt);
+      const mailtoLink = `mailto:support@whatsapp.com?subject=${subject}&body=${body}`;
+      window.location.href = mailtoLink;
+}
+
+    // Initialize default prompt
+    updatePrompt();
+  </script>
+</body>
+</html>
